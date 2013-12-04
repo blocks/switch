@@ -1,0 +1,40 @@
+/*
+
+### Switch
+Enhance simple radio buttons to prominently communicate a boolean state.
+
+input:checked - Indicates current selection.
+
+Compatibility untested.
+
+*/
+
+.ui-switch {
+
+    @include user-select(none);
+
+    cursor: default;
+    display: inline-block !important;
+    border-radius: .5em;
+    border: 5px solid #ccc;
+    background-color: #ccc;
+
+    input {
+        position: absolute;
+        left: -999em;
+    }
+
+}
+
+.ui-switch__label {
+    cursor: pointer;
+    display: inline-block;
+    padding: .2em .6em;
+    color: #000;
+}
+
+input:checked + .ui-switch__label {
+    border-radius: .25em;
+    background-color: #ddd;
+    font-weight: 700;
+}
